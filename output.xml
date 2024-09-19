@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20200514 17:42:49.497" rpa="false" generator="Robot 3.2.1 (Python 3.4.4 on win32)">
+<suite name="Python Robot Framework" id="s1" source="F:\QA_Automation\python_robot_framework">
+<suite name="RobotFramework" id="s1-s1" source="F:\QA_Automation\python_robot_framework\RobotFramework">
+<suite name="Test" id="s1-s1-s1" source="F:\QA_Automation\python_robot_framework\RobotFramework\Test">
+<suite name="SampleTest" id="s1-s1-s1-s1" source="F:\QA_Automation\python_robot_framework\RobotFramework\Test\SampleTest.robot">
+<test name="FirstTest" id="s1-s1-s1-s1-t1">
+<kw library="Login" name="Launch Application" type="setup">
+<doc>Launching the application base URL.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw library="CustomSeleniumLibrary" name="Open Browser">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg level="INFO" timestamp="20200514 17:42:50.274">Opening browser 'Chrome' to base url 'https://en.wikipedia.org/wiki/Automation'.</msg>
+<status status="PASS" starttime="20200514 17:42:50.273" endtime="20200514 17:43:00.617"></status>
+</kw>
+<kw library="CustomSeleniumLibrary" name="Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200514 17:43:00.617" endtime="20200514 17:43:02.043"></status>
+</kw>
+<status status="PASS" starttime="20200514 17:42:50.272" endtime="20200514 17:43:02.083"></status>
+</kw>
+<kw library="Login" name="User Login">
+<arguments>
+<arg>${USER_NAME}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw library="CustomSeleniumLibrary" name="Wait Until Element Is Visible">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${USER_NAME_LOCATOR}</arg>
+<arg>120</arg>
+<arg>"User/Login Name" input field not found</arg>
+</arguments>
+<kw library="CustomSeleniumLibrary" name="Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg level="FAIL" timestamp="20200514 17:44:25.597">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+</msg>
+<status status="FAIL" starttime="20200514 17:44:25.109" endtime="20200514 17:44:25.597"></status>
+</kw>
+<msg level="WARN" timestamp="20200514 17:44:25.597">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+</msg>
+<msg level="FAIL" timestamp="20200514 17:44:25.658">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+</msg>
+<status status="FAIL" starttime="20200514 17:43:02.087" endtime="20200514 17:44:25.658"></status>
+</kw>
+<status status="FAIL" starttime="20200514 17:43:02.085" endtime="20200514 17:44:25.659"></status>
+</kw>
+<kw library="CustomSeleniumLibrary" name="Close All Browsers" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200514 17:44:25.659" endtime="20200514 17:44:28.068"></status>
+</kw>
+<status status="FAIL" starttime="20200514 17:42:50.270" endtime="20200514 17:44:28.068" critical="yes">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20200514 17:42:49.597" endtime="20200514 17:44:28.080"></status>
+</suite>
+<status status="FAIL" starttime="20200514 17:42:49.593" endtime="20200514 17:44:28.084"></status>
+</suite>
+<status status="FAIL" starttime="20200514 17:42:49.589" endtime="20200514 17:44:28.087"></status>
+</suite>
+<status status="FAIL" starttime="20200514 17:42:49.502" endtime="20200514 17:44:28.090"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" name="Python Robot Framework" id="s1" fail="1">Python Robot Framework</stat>
+<stat pass="0" name="RobotFramework" id="s1-s1" fail="1">Python Robot Framework.RobotFramework</stat>
+<stat pass="0" name="Test" id="s1-s1-s1" fail="1">Python Robot Framework.RobotFramework.Test</stat>
+<stat pass="0" name="SampleTest" id="s1-s1-s1-s1" fail="1">Python Robot Framework.RobotFramework.Test.SampleTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg level="WARN" timestamp="20200514 17:44:25.597">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=81.0.4044.138)
+</msg>
+</errors>
+</robot>
